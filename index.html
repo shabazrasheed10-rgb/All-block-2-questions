@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Block 2 | Study Portal</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --accent-hdsf: #f0cf6a;
+      --accent-bbb: #38bdf8;
+      --text-main: #f1f5f9;
+      --text-dim: #94a3b8;
+      --border-color: #334155;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      margin: 0;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    .main-header {
+      width: 100%;
+      max-width: 900px;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+      gap: 15px;
+    }
+
+    @media (min-width: 600px) {
+      .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .header-info h3 { margin: 0; font-size: 1.4rem; color: var(--accent-bbb); }
+    .header-info p { margin: 4px 0 0; color: var(--text-dim); font-size: 0.85rem; }
+    
+    .creator-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .created-by-text {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+    }
+
+    .creator-link {
+      color: var(--accent-bbb); 
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      background: none;
+      border: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    /* Underline appears on hover */
+    .creator-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Styling for your SVG */
+    .creator-link svg {
+      flex-shrink: 0;
+    }
+
+    /* ===== CONTENT CONTAINERS ===== */
+    .section-container {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 40px;
+    }
+
+    .category-title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      padding-left: 12px;
+      border-left: 4px solid;
+    }
+
+    .hdsf-theme { border-color: var(--accent-hdsf); color: var(--accent-hdsf); }
+    .bbb-theme { border-color: var(--accent-bbb); color: var(--accent-bbb); }
+
+    /* ===== GRID SYSTEM ===== */
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 15px;
+    }
+
+    .subject-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 18px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .subject-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--text-dim);
+    }
+
+    .subject-card h1 {
+      font-size: 1.1rem;
+      margin: 0 0 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .subject-card .mcq-link {
+      color: var(--accent-bbb);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: #334155;
+      color: var(--accent-hdsf);
+      border: 1px solid rgba(240, 207, 106, 0.3);
+    }
+
+    .empty-state {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 480px) {
+      .category-title { font-size: 1.6rem; }
+      .subject-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-info">
+      <h3>End-Rotation & Final</h3>
+      <p>Block 2 • 2022-2025</p>
+    </div>
+    <div class="creator-container">
+      <span class="created-by-text">Created by</span>
+      <a href="https://t.me/Shabaz_Rasheed" target="_blank" class="creator-link">
+        Shabaz Rasheed
+        <svg width="20px" height="20px" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+          <g>
+            <linearGradient id="path2995" gradientUnits="userSpaceOnUse" x1="-683.305" y1="534.845" x2="-693.305" y2="511.512" gradientTransform="matrix(6 0 0 -6 4255 3247)">
+              <stop offset="0" stop-color="#37aee2"></stop>
+              <stop offset="1" stop-color="#1e96c8"></stop>
+            </linearGradient>
+            <path fill="url(#path2995)" d="M240 120c0 66.3-53.7 120-120 120S0 186.3 0 120 53.7 0 120 0s120 53.7 120 120z"></path>
+            <path fill="#c8daea" d="M98 175c-3.9 0-3.2-1.5-4.6-5.2L82 132.2 152.8 88l8.3 2.2-6.9 18.8L98 175z"></path>
+            <path fill="#a9c9dd" d="M98 175c3 0 4.3-1.4 6-3 2.6-2.5 36-35 36-35l-20.5-5-19 12-2.5 30v1z"></path>
+            <path fill="#ffffff" d="M100 144.4l48.4 35.7c5.5 3 9.5 1.5 10.9-5.1L179 82.2c2-8.1-3.1-11.7-8.4-9.3L55 117.5c-7.9 3.2-7.8 7.6-1.4 9.5l29.7 9.3L152 93c3.2-2 6.2-.9 3.8 1.3L100 144.4z"></path>
+          </g>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main class="section-container">
+    <h2 class="category-title hdsf-theme">HDSF</h2>
+    <div class="subject-grid">
+      
+      <div class="subject-card">
+        <h1>Anatomy 🦴</h1>
+        <a class="mcq-link" href="https://shabazrasheed10-rgb.github.io/Anatomy_Final-End-rotation1/">
+          Final & End-Rotation <span class="badge">129 MCQs</span>
+        </a>
+      </div>
+
+      <div class="subject-card">
+        <h1>Microbiology 🦠</h1>
+        <a class="mcq-link" href="https://shabazrasheed10-rgb.github.io/Microbiology_Final-End-rotation/">
+          Final & End-Rotation <span class="badge">100 MCQs</span>
+        </a>
+      </div>
+
+      <div class="subject-card">
+        <h1>Physiology ⚡</h1>
+        <a class="mcq-link" href="https://shabazrasheed10-rgb.github.io/Physiology_Final-End-rotation1/">
+          Final & End-Rotation <span class="badge">146 MCQs</span>
+        </a>
+      </div>
+
+      <div class="subject-card">
+        <h1>Molecular Bio 🧬</h1>
+        <a class="mcq-link" href="https://shabazrasheed10-rgb.github.io/Molculary-biology_Final-End-rotation/">
+          Final & End-Rotation <span class="badge">74 MCQs</span>
+        </a>
+      </div>
+
+      <div class="subject-card">
+        <h1>Genetics 🧬</h1>
+        <a class="mcq-link" href="https://shabazrasheed10-rgb.github.io/Genetics_Final-End-rotation/">
+          Final & End-Rotation <span class="badge">51 MCQs</span>
+        </a>
+      </div>
+
+      <div class="subject-card">
+        <h1>Cell Biology 🔬</h1>
+        <a class="mcq-link" href="https://shabazrasheed10-rgb.github.io/Cell-biology_Final-End-rotation/">
+          Final & End-Rotation <span class="badge">63 MCQs</span>
+        </a>
+      </div>
+
+      <div class="subject-card">
+        <h1>Histology 🫁</h1>
+        <span class="empty-state">Coming soon...</span>
+      </div>
+
+      <div class="subject-card">
+        <h1>Embryology 👶</h1>
+        <span class="empty-state">Coming soon...</span>
+      </div>
+
+    </div>
+  </main>
+
+  <section class="section-container">
+    <h2 class="category-title bbb-theme">BBB</h2>
+    <div class="subject-grid">
+      <div class="subject-card"><h1>Biochemistry</h1><span class="empty-state">Nothing yet...</span></div>
+      <div class="subject-card"><h1>Biophysics</h1><span class="empty-state">Nothing yet...</span></div>
+      <div class="subject-card"><h1>Basic Emergency</h1><span class="empty-state">Nothing yet...</span></div>
+    </div>
+  </section>
+
+</body>
+</html>
+
